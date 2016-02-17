@@ -9,7 +9,7 @@ import AppComponent from "./AppComponent";
 import Carbon from "carbon/Carbon";
 
 let carbon:Carbon = new Carbon();
-carbon.setSetting( "domain", "local.carbonldp.com" );
+carbon.setSetting( "domain", "dev.carbonldp.com" );
 carbon.extendObjectSchema( {
 	"acl": "http://www.w3.org/ns/auth/acl#",
 	"api": "http://purl.org/linked-data/api/vocab#",

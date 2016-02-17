@@ -1,5 +1,5 @@
 import { Component, ElementRef } from "angular2/core";
-import { CORE_DIRECTIVES } from "angular2/common";
+import { CORE_DIRECTIVES, FORM_DIRECTIVES } from "angular2/common";
 
 import { ROUTER_DIRECTIVES, Location, RouteConfig, RouterLink, Router } from "angular2/router";
 
@@ -14,7 +14,7 @@ import "./style.css!";
 @Component( {
 	selector: "app",
 	template: template,
-	directives: [ CORE_DIRECTIVES, ROUTER_DIRECTIVES, DocumentExplorerComponent ],
+	directives: [ CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES, DocumentExplorerComponent ],
 } )
 export default class AppComponent {
 	public static parameters:any = [ [ ElementRef ], [ Carbon ] ];
@@ -23,8 +23,8 @@ export default class AppComponent {
 
 	public carbon:Carbon;
 
-	public username:string = "";
-	public password:string = "";
+	public username:string;
+	public password:string;
 
 	public appContext:AppContext = null;
 
